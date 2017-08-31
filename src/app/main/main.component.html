@@ -1,7 +1,16 @@
 <div class="col-md-9">
-    <h3>test</h3>
+    <h3>World Wide weather Report</h3>
     <div class="form-group">
         <input type="text" class="form-control" placeholder="citiname" [(ngModel)]="this.searching">
     </div>
     <button class="btn btn-info" (click)="weatherUser()" >search</button>
+    <div *ngIf="searches">
+        <h3>{{searches.base}}:{{searches.name}},{{searches.sys.country}}</h3>
+        <p><span class="label label-primary"> temprature </span>{{searches.main.temp}}</p>
+        <p><span class="label label-info"> pressure </span>{{searches.main.pressure}}</p>     
+        <p><span class="label label-success"> humidity </span>{{searches.main.humidity}}</p>  
+        <p><span class="label label-success"> maximum temprature </span>{{searches.main.temp_max}}</p>                
+        <p><span class="label label-success"> minimum temprature </span>{{searches.main.temp_min}}</p>                
+        <h4 *ngFor="let search of searches.weather">description: {{search.description}}</h4>
+    </div>
 </div>

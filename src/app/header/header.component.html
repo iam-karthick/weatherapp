@@ -9,12 +9,12 @@
         </button>
         <a class="navbar-brand" href="#">APIsearch!</a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
+     <!-- <div id="navbar" class="navbar-collapse collapse">
         <form class="navbar-form navbar-right">
           <div class="form-group">
-            <input type="text" placeholder="search" class="form-control">
+            <input type="text" placeholder="search location" [(ngModel)]="this.searching" class="form-control">
           </div>
-          <button type="submit" class="btn btn-success">Search</button>
+          <button type="submit" (click)="weatherUser()" class="btn btn-success">Search</button>
         </form>
       </div><!--/.navbar-collapse -->
     </div>
